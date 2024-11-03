@@ -1,0 +1,329 @@
+There are following question and answer for magento 2 interview
+
+Practically Solved Feature:
+1. Dependency Injection.
+https://techflarestudio.com/how-to-replace-and-add-constructor-arguments-using-dependency-injection-in-magento-2/
+
+
+Today 
+Non injectable classes
+Injectable classes
+Preferences
+Type of product
+Product Tier Price
+Product Advance Price
+Type of session in Magento 2
+How to create custom theme in magentoo 2
+Repository classes in magento 2 
+Product tier prices
+Different store and And website
+
+
+
+Magento2 Service Contract
+https://webkul.com/blog/magento2-service-contract/
+Extension attribute 
+Proxy classes
+Graph ql
+Order api
+How to upgrade magento 2
+
+
+
+
+Function overriding
+Order status flow
+Type of entity                  Done
+Type or preferences    Done
+How to upgrade Magento 2 to Magento latest version Done 
+EAV module structure  Done
+Full Page Cache in Magento 2?  Done
+
+
+Dependency injection Done
+use of factory classes  Done
+extension attribute
+Graphql or rest api
+how to call static block  
+catalog price rules and cart price rules Done
+how to call js and add in custom module
+petch file
+when we run indexing or what table are updated 
+Rest API
+Type of join   Pending
+Differences between delete or truncate in Mysql
+
+Version control
+Git slap
+Type hinting
+Mysql limit
+Mysql opset
+Fetch top 5 record from mysql table
+Fetch 10 to 15 record from mysql table
+Mysql boundary
+Mysql indexing
+view in mysql
+ASL in magento 2
+Use of reddish and vernsh
+Improve performance of magento
+Graphql query::
+Git stash
+
+
+
+Dependency injection  Done
+CDN in magento 2 
+Service contract
+Resource model and model
+Core php concept and php opps
+Upgradedata.php and installschema.php
+Directschema.xml 
+Require file for module creation Done
+Type of cache in magento 2  Done
+Which table save the attribute value in database for product entity
+Varnish and radish cache
+Payment module creation (security needed)
+Virtual type in di.xml file and section.xml  Done
+Designer pattern and composer.json and composer.lock file
+Use of autoload file
+Plugin and proxy classe
+Cart price rules and catalog price rules Done
+Rail manager
+Primary and unique key
+Class, construct, opps concept
+Pre Built function in php
+CDN construct Done
+UI component
+Require js and reindexer   Done
+Upgrade and install schema and script all file
+Direct schema file and use 
+Require file for module Done
+Type of cache Done
+Select attribute of product which table saves ?
+Extension attribute
+EAV Module  Done
+View model
+Abstract class Done
+
+Here we create Collection Grid , edit/add grid row and installer in Magento2:
+https://webkul.com/blog/create-collection-grid-editadd-grid-row-installer-magento2/
+
+Magento Session:
+
+
+
+Magento Session:
+https://meetanshi.com/blog/get-set-and-unset-custom-session-variable-in-magento-2/
+https://meetanshi.com/blog/get-set-and-unset-custom-session-variable-in-magento-2/
+
+Custom Theme in Magento2:
+https://webkul.com/blog/custom-theme-in-magento2/
+https://www.thecoachsmb.com/theme-development-tutorial-step-by-step/
+
+How to override core class which is already overrided by other custom module in Magento 2
+https://magento.stackexchange.com/questions/136852/how-to-override-core-class-which-is-already-overrided-by-other-custom-module-in
+
+How to get the collection of a custom module in Magento 2?
+https://vrajeshpatel.in/2021/06/13/how-to-get-the-collection-of-a-custom-module-in-magento-2/
+
+Magento Session:
+
+Magento 2 Repository (Repositories in Magento 2):
+https://webkul.com/blog/create-repositories-magento2/
+https://magento.stackexchange.com/questions/158081/when-should-we-use-a-repository-and-factory-in-magento-2
+
+
+
+Magento\Customer\Model\Session
+Magento\Checkout\Model\Session 
+
+How to Get, Set and Unset Custom Session Variable in Magento 2
+https://meetanshi.com/blog/get-set-and-unset-custom-session-variable-in-magento-2/
+
+Registry & Register:
+https://www.rohanhapani.com/how-to-use-viewmodel-in-magento-2/
+https://aureatelabs.com/blog/how-to-use-viewmodels-in-magento-2/
+https://devhooks.in/blog/how-to-use-viewmodels-in-magento2
+
+
+Registry & Register::
+https://magefan.com/blog/magento-2-registry-register
+https://meetanshi.com/blog/use-registry-in-magento-2/
+
+Magento Virtual Type & Type :
+https://magefan.com/blog/magento-2-virtual-types
+https://www.codedecorator.com/blog/what-is-the-difference-between-type-and-virtualtype-practical-example/
+https://asolutions.co.in/virtual-type-in-magento-2/
+https://techflarestudio.com/how-to-replace-and-add-constructor-arguments-using-dependency-injection-in-magento-2/
+https://www.codedecorator.com/blog/what-is-the-difference-between-type-and-virtualtype-practical-example/
+https://www.codedecorator.com/blog/what-is-the-difference-between-type-and-virtualtype-practical-example/
+
+
+
+
+
+Magento 2  Preferences:
+https://magefan.com/blog/magento-2-preferences#:~:text=Magento%202%20Preferences%20is%20used,PHP%20classes%20and%20their%20methods.
+
+
+Magento 2 Preferences
+https://magefan.com/blog/magento-2-preferences#:~:text=Magento%202%20Preferences%20is%20used,PHP%20classes%20and%20their%20methods.
+
+Magento 2 Object Manager
+https://magefan.com/blog/magento-2-object-manager
+
+Magento 2 Requirejs config
+https://www.rakeshjesadiya.com/require-js-config-map-vs-paths-vs-shim-in-magento/
+https://www.rakeshjesadiya.com/require-js-config-map-vs-paths-vs-shim-in-magento/
+https://webkul.com/blog/include-use-custom-js-file-require-js-magento2/#:~:text=To%20add%20a%20js%20file,Test%2Fview%2Ffrontend%E2%80%9D.
+
+
+
+CDN in  2 Magento 2
+https://amasty.com/knowledge-base/how-to-configure-the-cdn-in-magento-2.html#:~:text=Content%20Delivery%20Network%20or%20CDN,CDN%20into%20your%20Magento%202.
+
+Rest API in  2 Magento 2
+https://meetanshi.com/blog/create-custom-rest-api-in-magento-2/
+
+Mode in  2 Magento 2
+https://magefan.com/blog/magento-2-modes
+
+Magento 2 EAV Model
+https://bsscommerce.com/confluence/magento-2-eav-model/
+https://www.onlineinterviewquestions.com/differences-eav-flat-model/
+
+
+Dependency Injection:
+https://www.cloudways.com/blog/dependency-injection-magento-2/
+https://www.sparsh-technologies.com/blog/dependency-injection-in-magento-2
+https://www.sparsh-technologies.com/blog/dependency-injection-in-magento-2
+
+Type Of Plugin In Magento 2:
+
+https://magefan.com/blog/create-plugin-in-magento-2
+https://devdocs.magento.com/guides/v2.3/extension-dev-guide/plugins.html
+
+Magento 2 Full Page cache:
+https://magefan.com/blog/magento-2-full-page-cache
+
+
+How to create a “HELLO WORLD” module in Magento 2?
+https://www.codilar.com/blog/how-to-create-a-hello-world-module-in-magento-2/
+
+
+Magento 2: Models, Resource Models, and Collections
+https://www.codilar.com/blog/magento-2-models-resource-models-and-collections/
+
+
+What are Setup Scripts in Magento 2 and why you should use them
+https://www.codilar.com/blog/setup_scripts_magento-2/
+Second Round Interview::
+UI Component 
+How UI component work
+How upgrade Magento
+How Binding table for UI component
+Order table or data table
+Type of mode
+Magento Database for order 
+
+
+
+
+Why we use the elastic search in magento 2
+
+Create Magento 2 Console command:
+https://devhooks.in/blog/magento-2-how-to-create-a-custom-console-command
+https://www.magedelight.com/resources/how-to-create-new-command-in-console-cli-in-magento-2/
+https://www.codextblog.com/magento-2/how-to-create-a-custom-console-command-in-magento-2/
+https://meetanshi.com/blog/create-console-command-in-magento-2/
+https://www.magedelight.com/resources/how-to-create-new-command-in-console-cli-in-magento-2/
+
+
+
+
+Abstract class	
+https://www.phpclasses.org/blog/post/285-What-is-Class-Abstraction-in-PHP.html
+
+Magic Method
+https://www.edureka.co/blog/magic-methods-in-php
+https://www.edureka.co/blog/magic-methods-in-php
+
+
+
+
+
+
+
+Static method of:
+
+https://www.geeksforgeeks.org/static-function-in-php/
+
+extension-attributes
+
+https://www.dckap.com/blog/extension-attributes-in-magento2/
+
+php tutorial:
+
+https://www.youtube.com/watch?v=a_qREkJ78f4&list=PL0b6OzIxLPbyrzCMJOFzLnf_-_5E_dkzs
+
+
+https://www.youtube.com/watch?v=V9c2M7c5xqU&list=PL0b6OzIxLPbyrzCMJOFzLnf_-_5E_dkzs&index=4
+Catalog Price Rules:
+Catalog Price Rules represent promotions on category or product pages and
+Catalog price rules do not use coupon codes.
+
+Cart Price Rule:
+ applies promotions to the Cart in the Checkout phase. Offers like coupon code, free shipping, discounts in order total, buy 1 get 1 free, etc., are examples of Cart Price Rule.
+Cart price rules create discounts for orders at the checkout level, based on a set of conditions. The discount can be applied automatically when the conditions are met, or be applied when the customer enters a valid coupon code. At the point when applied, the discount shows up on the shopping cart page under the subtotal.
+We can add catalog price rules under Marketing > Promotions > Catalog price rule.
+The  PHP Object-Oriented Programming concepts are following given below.:
+https://www.valuebound.com/resources/blog/object-oriented-programming-concepts-php-part-1
+
+
+1.Class
+2. Objects
+3. Inheritance
+4. Interface
+5. Abstraction
+6. Magic Methods
+
+Magento 2 Design pattern for developer point of view given below:
+https://bsscommerce.com/confluence/magento-2-design-patterns/
+
+    1. Object Manager
+    2. Dependency Injection	
+    3. Factories
+    4. Proxies
+    5. Preferences
+    6. Argument Types
+    7. Virtual Types
+    8. Events and observers
+
+
+Factory Design Pattern:
+
+https://magento.stackexchange.com/questions/250723/what-is-factory-in-magento2-and-why-use#:~:text=In%20Magento%202%2C%20the%20Magento,instead%20of%20using%20new%20keyword.
+
+The Factory class name is the name of Model class and append with the Factory word. It also dependent with ObjectManager Class.
+This design pattern is used to create objects for all the classes instead of using new keywords.
+
+What is Difference b/w Normal Object And Factory Object
+Key Differences
+Feature
+Normal Object
+Factory Object
+Instantiation
+Created directly or injected
+Created by the Factory class
+Lifetime
+Often single instance per class
+Can create multiple, unique instances as needed
+Dependency Mgmt
+Static and injected directly
+Dynamic, created on demand
+Best For
+Fixed dependencies
+Dynamic or multiple instances
+
+Speed Up Magento 2 (Improve The Performance) :
+https://magefan.com/blog/speed-up-magento-2#1-update-to-the-latest-version-of-magento
