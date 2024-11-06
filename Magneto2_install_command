@@ -1,0 +1,184 @@
+=====magento 2 Download Command =========
+
+composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition:2.4.5-p1
+
+
+composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition:2.4.6 <foldername>
+
+
+
+========== Installation of magento 2 command ====================
+
+php bin/magento setup:install \
+--base-url=https://momentsmp.tecnotree.com/magedemo/ \
+--db-host=localhost \
+--db-name=magedemo \
+--db-user=root \
+--db-password=Momentsmp@123 \
+--admin-firstname=admin \
+--admin-lastname=admin \
+--admin-email=akhilesh.tenguria@tecnotree.com \
+--admin-user=admin \
+--admin-password=admin@123 \
+--language=en_US \
+--currency=USD \
+--timezone=America/Chicago \
+--use-rewrites=1 \
+--backend-frontname=admin \
+--search-engine=elasticsearch7 \
+--elasticsearch-host=localhost \
+--elasticsearch-port=9200   
+
+
+php bin/magento s:up && php bin/magento s:d:c && php bin/magento s:s:d -f
+sudo find /var/www/html/magento244 -type f -exec chmod 644 {} \;
+sudo find /var/www/html/magento244 -type d -exec chmod 755 {} \;
+sudo chmod -R 777 var generated pub/static
+chmod -R 775 pub/static/ pub/media/ var/
+sudo chmod -R 777 var/ generated/
+
+
+php bin/magento indexer:reindex
+
+# Clear cache
+php bin/magento cache:clean
+
+
+
+====== Create Admin User with command  =====
+
+php bin/magento admin:user:create --admin-user="stcdemo" --admin-password="Welcome@123" --admin-email="stcdemo@gmail.com" --admin-firstname="stcdemo" --admin-lastname="tecnotree"
+
+
+
+
+
+
+
+==== import database using Command ======
+Export Database
+mysql -u root -p dbname > /var/www/html/momentsmp/ftkgvbfpvc21.sql
+
+Import Databases
+mysql -uroot -p;
+source /var/www/html/momentsmp/ftkgvbfpvc-dump-05-11-2024.sql
+OR
+mysql -u root -p dbname < /var/www/html/momentsmp/ftkgvbfpvc21.sql
+
+
+=========Change password of mysql user======================
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Momentsmp@123';
+
+
+========== INSTALL PHP in nginx ==========================
+
+sudo apt-get install php8.1 php8.1-fpm-y
+
+sudo apt-get -y install php8.1-fpm php8.1-cli
+
+==Install php Dependency.==
+
+sudo apt-get install php8.1-gd php8.1-curl php8.1-intl php8.1-xsl php8.1-zip php8.1-soap php8.1-mbstring php8.1-mysql php8.1-bcmath php8.1-mcrypt php8.1-dom
+
+
+
+
+
+=========  # Download and install the public signing key: # ======================
+
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+
+# Add the Elasticsearch repository to the sources list:
+sudo sh -c 'echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" > /etc/apt/sources.list.d/elastic-7.x.list'
+
+# Update package lists and install Elasticsearch:
+sudo apt update
+sudo apt install elasticsearch
+
+
+
+# Start Elasticsearch
+sudo systemctl start elasticsearch
+
+sudo systemctl status elasticsearch
+
+# Enable Elasticsearch to start on boot
+sudo systemctl enable elasticsearch
+
+# Verify Elasticsearch is Running
+curl -X GET "localhost:9200/"
+
+
+
+
+
+
+
+
+
+
+====White list command====
+Db schema create
+
+php bin/magento setup:db-declaration:generate-whitelist --module-name=Tecnotree_GetOrders 
+
+
+
+
+============  nginx server /etc/nginx/sites-available/default  =============
+FileName :  default
+
+
+upstream fastcgi_backend {
+   server   unix:/var/run/php8.1-fpm.sock;
+}
+
+server {
+#	listen 80 default_server;
+#	listen [::]:80 default_server;
+	listen 443 ssl default_server;
+        listen [::]:443 ssl default_server;
+	ssl_certificate     star_tecnotree_com.pem;
+ 	ssl_certificate_key star_tecnotree_com.key;
+
+
+
+root /var/www/html/m2-foldername/pub;
+index index.php index.html index.htm index.nginx-debian.html;
+server_name momentsmp.tecnotree.com;
+
+
+location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		add_header 'Access-Control-Allow-Credentials' 'true';
+		add_header 'Access-Control-Allow-Origin' '*';
+    		add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+    		add_header 'Access-Control-Allow-Headers' 'Origin, X-Requested-With, Content-Type, Authorization';
+#		try_files $uri $uri/ =404;
+		index index.html index.htm index.php;
+		try_files $uri $uri/ /index.php?$args;
+	}
+
+	location ~ \.php$ {
+		add_header 'Access-Control-Allow-Origin' '*' always;
+		add_header 'Access-Control-Allow-Methods' 'GET, POST, PUT, DELETE, OPTIONS' always;
+		add_header 'Access-Control-Allow-Headers' 'DNT,Authorization,X-CustomHeader,Keep-Alive,User-Agent,Origin,Referer,X-HTTP-Method-Override,X-Accept-Charset,X-Accept,Accept,Access-Control-Request-Method,Access-Control-Request-Headers,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type' always;
+        	include snippets/fastcgi-php.conf;
+		fastcgi_buffers 11024 16k;
+		fastcgi_buffer_size 32k;
+	        fastcgi_pass unix:/var/run/php/php8.1-fpm.sock; # Adjust the PHP-FPM socket pa
+		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+		include fastcgi_params;
+   	 }
+
+
+
+     	location /adminer.php {
+        #	root /var/www/html;
+		auth_basic "Adminer Login";
+	        auth_basic_user_file /etc/nginx/.adminer_password; # Create a password file
+        	fastcgi_pass unix:/var/run/php/php8.1-fpm.sock; # Adjust to your PHP-FPM socket
+	        include fastcgi_params;
+        	fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+	}
