@@ -80,7 +80,31 @@ sudo apt-get -y install php8.1-fpm php8.1-cli
 
 sudo apt-get install php8.1-gd php8.1-curl php8.1-intl php8.1-xsl php8.1-zip php8.1-soap php8.1-mbstring php8.1-mysql php8.1-bcmath php8.1-mcrypt php8.1-dom
 
+sudo systemctl restart nginx
+============================================================================================
 
+
+Execute these commands:
+
+vim /etc/php/8.1/fpm/php.ini
+
+vim /etc/php/8.1/cli/php.ini
+
+Change the lines in those files to match the following:
+memory_limit = 2G
+
+max_execution_time = 1800
+
+===============Install and configure MySQL==============
+
+#Execute the command below:
+sudo apt install -y mysql-server mysql-client
+
+#Enter the following line to secure the installation:
+sudo mysql_secure_installation
+
+#Use the following command to check the installation:
+mysql -u root -p
 
 
 
